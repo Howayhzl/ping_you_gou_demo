@@ -8,9 +8,19 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <dubbo:application name="dubboxdemo-service"/>
+    <mvc:annotation-driven >
+        <mvc:message-converters register-defaults="false">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 引用dubbo 服务 -->
+    <dubbo:application name="dubboxdemo-web" />
     <dubbo:registry address="zookeeper://192.168.25.135:2181"/>
-    <dubbo:annotation package="cn.itcast.dubbodemo.service"/>
+    <dubbo:annotation package="cn.itcast.dubboxdemo.controller" />
+
 
 
 </beans>

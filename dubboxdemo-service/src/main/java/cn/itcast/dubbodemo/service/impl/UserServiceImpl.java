@@ -1,9 +1,8 @@
 package cn.itcast.dubbodemo.service.impl;
 
+
 import cn.itcast.dubbodemo.service.UserService;
-import org.springframework.stereotype.Service;
-
-
+import com.alibaba.dubbo.config.annotation.Service;
 
 @Service
 public class UserServiceImpl implements UserService {

@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.itheima.demo</groupId>
-    <artifactId>dubboxdemo-service</artifactId>
+    <artifactId>dubboxdemo-web</artifactId>
     <packaging>war</packaging>
+
     <properties>
         <spring.version>5.0.3.RELEASE</spring.version>
     </properties>
@@ -92,7 +92,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定端口 -->
-                    <port>8081</port>
+                    <port>8082</port>
                     <!-- 请求路径 -->
                     <path>/</path>
                 </configuration>
